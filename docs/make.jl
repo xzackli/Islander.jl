@@ -11,3 +11,7 @@ makedocs(;
     authors="xzackli",
     assets=String[],
 )
+
+deploydocs(
+    repo = "github.com/xzackli/Islander.jl.git",
+)
