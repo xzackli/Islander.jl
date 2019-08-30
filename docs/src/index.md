@@ -5,5 +5,6 @@ Islander will be a nice component separation code someday!
 ```
 
 ```@autodocs
-Modules = [Islander, Pixell]
+Modules = [Islander]
+Pages = ["Islander.jl", "Pixell.jl"]
 ```
