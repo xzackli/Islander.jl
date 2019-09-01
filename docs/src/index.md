@@ -3,8 +3,9 @@
 ```@index
 ```
 
+
 ```@autodocs
-Modules = [Islander, Pixell]
+Modules = [Islander]
 ```
 
 Islander will be a nice component separation code someday!
