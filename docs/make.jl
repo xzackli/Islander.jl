@@ -1,7 +1,7 @@
 using Documenter, Islander
 
 makedocs(;
-    modules=[Islander],
+    modules=[Islander, Pixell],
     format=Documenter.HTML(),
     pages=[
         "Home" => "index.md",
