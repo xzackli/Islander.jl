@@ -1,6 +1,7 @@
 module Islander
 
 include("pixell.jl")
+export Pixell
 
 """
 Hello world function, for testing.

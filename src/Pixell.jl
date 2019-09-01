@@ -1,8 +1,11 @@
 """
-Map utilities for CAR pixelization.
+Map utilities for rectangular pixels.
 """
 module Pixell
 
+"""
+Map class which will eventually have enmap functionality.
+"""
 mutable struct Enmap{T}
     data::Array{T}
     # presumably some WCS solution here
@@ -15,4 +18,4 @@ function test()
     println("test")
 end
 
-end # module
+end
