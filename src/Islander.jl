@@ -1,11 +1,7 @@
 module Islander
 
-include("pixell.jl")
-export Pixell
+export Enmap, car
 
-"""
-Hello world function, for testing.
-"""
-greet() = print("Hello World 2!")
+include("Pixell.jl")
 
 end # module

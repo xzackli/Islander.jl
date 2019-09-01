@@ -1,7 +1,6 @@
 """
 Map utilities for rectangular pixels.
 """
-module Pixell
 
 using WCS  # wraps the WCSLIB C library
 using FFTW
@@ -74,5 +73,3 @@ function car(pos, res, shape)
     #     pv    = [(2, 1, 45.0)])
     WCSTransform(2) # placeholder
 end
-
-end # module
