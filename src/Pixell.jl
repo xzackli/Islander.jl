@@ -9,9 +9,8 @@ using FFTW
 Map type, contains an AbstractArray and a WCS object, but behaves like the
 AbstractArray it contains for array operations.
 
-It does not implement many Base Array operations, under the assumption that you
-probably will not want to do an LU decomposition on a map when you type `m1/m2`.
-You should work with the data directly `enmap_object.data` if you need
+It only implements the subset of Base.Array operations which are common on maps.
+You should work with the data directly using `enmap_instance.data` if you need
 additional Array functions.
 """
 struct Enmap{T,N,AA<:AbstractArray} <: AbstractArray{T,N}
@@ -56,7 +55,7 @@ end
 
 
 """
-Generate a plate carree WCS object.
+Generate a plate carree WCS object. **not implemented!**
 
 pixell python reference:
 ```python

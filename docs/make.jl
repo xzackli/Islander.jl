@@ -5,6 +5,7 @@ makedocs(;
     format=Documenter.HTML(assets=String[]),
     pages=[
         "Home" => "index.md",
+        "Conventions" => "conventions.md"
     ],
     repo="https://github.com/xzackli/Islander.jl/blob/{commit}{path}#L{line}",
     sitename="Islander.jl",
