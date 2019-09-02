@@ -5,10 +5,14 @@ Map utilities for rectangular pixels.
 using WCS  # wraps the WCSLIB C library
 using FFTW
 
-
 """
 Map type, contains an AbstractArray and a WCS object, but behaves like the
 AbstractArray it contains for array operations.
+
+It does not implement many Base Array operations, under the assumption that you
+probably will not want to do an LU decomposition on a map when you type `m1/m2`.
+You should work with the data directly `enmap_object.data` if you need
+additional Array functions.
 """
 struct Enmap{T,N,AA<:AbstractArray} <: AbstractArray{T,N}
     data::AA  # some kind of abstract array
@@ -55,6 +59,7 @@ end
 Generate a plate carree WCS object.
 
 pixell python reference:
+```python
 pos :
 def car(pos, res=None, shape=None, rowmajor=False, ref=None):
 	pos, res, shape, mid = validate(pos, res, shape, rowmajor)
@@ -63,6 +68,7 @@ def car(pos, res=None, shape=None, rowmajor=False, ref=None):
 	w.wcs.crval = np.array([mid[0],0])
 	if ref is "standard": ref = (0,0)
 	return finalize(w, pos, res, shape, ref=ref)
+```
 """
 function car(pos, res, shape)
     # WCSTransform(2;

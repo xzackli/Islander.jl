@@ -6,7 +6,7 @@
 
 ```@autodocs
 Modules = [Islander]
-Order   = [:function, :type]
+Order   = [:type, :function]
 Pages   = ["Islander.jl", "Pixell.jl"]
 ```
 
